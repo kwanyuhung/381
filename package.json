@@ -1,0 +1,17 @@
+{
+    "name": "server",
+    "description": "NodeJS Session",
+    "author": "test",
+    "version": "0.0.1",
+    "dependencies": {
+        "express": "*",
+        "ejs": "*",
+        "body-parser": "*",
+        "cookie-session": "*",
+        "mongodb": "^2.2.31"
+    },
+    "engine": "node >= 6.0.0",
+    "scripts": {
+        "start": "node server"
+    }
+}
