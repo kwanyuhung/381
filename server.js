@@ -18,7 +18,7 @@ var SECRETKEY2 = 'Keep this to yourself';
 var MongoClient = require('mongodb').MongoClient;
 
 // Connect to the db
-MongoClient.connect("mongodb://kwanyuhung:Kwan1314@ds151382.mlab.com:51382/abc", function(err, db) {
+MongoClient.connect("mongodb://<dbuser>:<dbpassword>@ds151382.mlab.com:51382/abc", function(err, db) {
   if(err) { return console.dir(err); }
 
   var collection = db.collection('restaurant');
