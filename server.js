@@ -2,10 +2,7 @@ var express = require('express');
 var session = require('cookie-session');
 var bodyParser = require('body-parser');
 var app = express();
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
-var ObjectId = require('mongodb').ObjectID;
-var mongourl = 'mongodb://chi94:doublechi123@ds149682.mlab.com:49682/chi94';
+
 
 
 
@@ -72,31 +69,9 @@ app.get('/logout',function(req,res) {
 });
 
 app.post('/create',function(req,res) {
-	MongoClient.connect(mongourl, function(err, db) {
-		assert.equal(err,null);
-		
-		db.collection('restaurants').insertOne( {
-			id:'2', 
-			name:'Steve', 
-			cuisine:'Jobs',
-			street:'Jobs2',
-			building:'Jobs3',
-			zipcode:'0000000',
-			gps1:'000',
-			gps2:'000',
-			photo:'Jobs'
-		});
-		});
 	res.redirect('/');
 });
 
-
-db.collection('books').insertOne( {
-	"name" : "Introduction to Node.js",
-	"author" : "John Dole",
-	"price" : 75.00,
-	"stock" : 0      
-   }
 
 app.listen(process.env.PORT || 8099);
 
